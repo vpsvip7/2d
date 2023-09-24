@@ -13,19 +13,19 @@ set -e
 ###
 
 # Domain Name
-DOMAIN="vpn.khaledagn.com"
+DOMAIN="ACA-TU-IP"
 
 # PROTOCOL
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":36712"
+UDP_PORT=":1-65535"
 
 # OBFS
-OBFS="agnudp"
+OBFS="demo"
 
 # PASSWORDS
-PASSWORD="agnudp"
+PASSWORD="1234"
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
