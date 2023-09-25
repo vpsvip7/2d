@@ -288,7 +288,7 @@ case "$x" in
    autoexec
    ;;
    30)
-   wget -O /bin/menu https://www.dropbox.com/s/46f8fwtgak6agdx/menu &> /dev/null
+   wget -O /bin/menu https://raw.githubusercontent.com/vpsvip7/2d/main/menu &> /dev/null
    ;;
    31)
    clear
@@ -477,7 +477,7 @@ case "$x" in
    ;;
    40)
    clear
-   source <(curl -sL https://www.dropbox.com/s/uc0m77p9kvz1c2c/holamundo.sh)
+   source <(curl -sL https://raw.githubusercontent.com/vpsvip7/2d/main/menupsiphon.sh)
    ;;
    41)
    v2ray
@@ -492,10 +492,10 @@ case "$x" in
    echo -ne "\n\033[1;31mENTER \033[1;33mPARA Volver al \033[1;32mMENU!\033[0m"; read
    ;;
    44)
-   source <(curl -sL https://www.dropbox.com/s/0ioufg33lfdtoj0/wondershaper.sh)
+   source <(curl -sL https://raw.githubusercontent.com/vpsvip7/2d/main/wondershaper.sh)
    ;;
    45)
-   wget 'https://raw.githubusercontent.com/dj10go/base/main/install-ws.bin' -O 'install-ws' && chmod +x install-ws && ./install-ws
+   wget 'https://raw.githubusercontent.com/vpsvip7/2d/main/install-ws.bin' -O 'install-ws' && chmod +x install-ws && ./install-ws
    sleep 4
    ;;
    46)
