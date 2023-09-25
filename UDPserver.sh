@@ -40,11 +40,11 @@ repo_install(){
 
 time_reboot(){
   print_center -ama "${a92:-REINICIANDO VPS EN} $1 ${a93:-SEGUNDOS}"
-  REBOOT_TIMEOUT="$1"
+  REBOOT_TIMEOUT="$4"
   
   while [ $REBOOT_TIMEOUT -gt 0 ]; do
      print_center -ne "-$REBOOT_TIMEOUT-\r"
-     sleep 1
+     sleep 4
      : $((REBOOT_TIMEOUT--))
   done
   reboot
@@ -62,7 +62,7 @@ check_sistem(){
   VER=$(echo $VERSION_ID|awk -F '.' '{print $1}')
   if [[ ! $NAME = 'Ubuntu' ]]; then
     fail
-  elif [[ $VER -lt 20 ]]; then
+  elif [[ $VER -lt 14 ]]; then
     rm -rf $udp_file
       fail
   fi
