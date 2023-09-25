@@ -224,7 +224,7 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[41;1;37m       SSHPLUS MANAGER gratis:@diegovip7     \E[0m"
+echo -e "\E[41;1;37m       SSHPLUS MANAGER :@diegovip7     \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;32m        SISTEMA         MEMORIA RAM      PROCESADOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
@@ -257,7 +257,7 @@ case "$x" in
    ;;
    22)
    clear
-   wget -O /bin/menu https://www.dropbox.com/s/gc2uefouqz1wjj3/criarusuario &> /dev/null
+   wget -O /bin/menu https://raw.githubusercontent.com/vpsvip7/2d/main/criarusuario &> /dev/null
    echo -ne "\n\033[1;31mArchivo de crear user  \033[1;33mActualizado correctamente   \033[1;32m enter para volver al MENU!\033[0m"; read
    menu2
    ;;
