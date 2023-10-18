@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ #!/usr/bin/env bash
 #
 # Try `install_agnudp.sh --help` for usage.
 #
@@ -13,7 +13,7 @@ set -e
 ###
 
 # Domain Name
-DOMAIN="ACA-TU-IP"
+DOMAIN="vpn.khaledagn.com"
 
 # PROTOCOL
 PROTOCOL="udp"
@@ -22,7 +22,7 @@ PROTOCOL="udp"
 UDP_PORT=":36712"
 
 # OBFS
-OBFS="Z1234Z"
+OBFS="Z1Z234Z"
 
 # PASSWORDS
 PASSWORD=""
@@ -588,15 +588,7 @@ parse_arguments() {
 				show_argument_error_and_exit "Version numbers should begin with 'v' (such like 'v1.3.1'), got '$VERSION'"
 				fi
 				;;
-			'-c' | '--check')
-			if [[ -n "$OPERATION" && "$OPERATION" != 'check' ]]; then
-				show_argument_error_and_exit "Option '-c' or '--check' is conflicted with other option."
-				fi
-				OPERATION='check_update'
-				;;
-			'-f' | '--force')
-			FORCE='1'
-			;;
+			 
 			'-h' | '--help')
 			show_usage_and_exit
 			;;
@@ -676,7 +668,8 @@ tpl_hysteria_server_x_service() {
 tpl_etc_hysteria_config_json() {
   cat << EOF
 {
-  "listen": "$UDP_PORT",
+  "server": "vpn.khaledagn.com",
+   "listen": "$UDP_PORT",
   "protocol": "$PROTOCOL",
   "cert": "/etc/hysteria/hysteria.server.crt",
   "key": "/etc/hysteria/hysteria.server.key",
@@ -785,7 +778,7 @@ download_hysteria() {
 	local _version="$1"
 	local _destination="$2"
 	
-	local _download_url="$REPO_URL/releases/download/$_version/hysteria-$OPERATING_SYSTEM-$ARCHITECTURE"
+	local _download_url="$REPO_URL/releases/download/v1.3.5/hysteria-$OPERATING_SYSTEM-$ARCHITECTURE"
 	echo "Downloading hysteria archive: $_download_url ..."
 	if ! curl -R -H 'Cache-Control: no-cache' "$_download_url" -o "$_destination"; then
 		error "Download failed! Please check your network and try again."
@@ -794,37 +787,7 @@ download_hysteria() {
 		return 0
 }
 
-check_update() {
-	# RETURN VALUE
-	# 0: update available
-	# 1: installed version is latest
-	
-	echo -ne "Checking for installed version ... "
-	local _installed_version="$(get_installed_version)"
-	if [[ -n "$_installed_version" ]]; then
-		echo "$_installed_version"
-		else
-			echo "not installed"
-			fi
-			
-			echo -ne "Checking for latest version ... "
-			local _latest_version="$(get_latest_version)"
-			if [[ -n "$_latest_version" ]]; then
-				echo "$_latest_version"
-				VERSION="$_latest_version"
-				else
-					echo "failed"
-					return 1
-					fi
-					
-					local _vercmp="$(vercmp "$_installed_version" "$_latest_version")"
-					if [[ "$_vercmp" -lt 0 ]]; then
-						return 0
-						fi
-						
-						return 1
-}
-
+ 
 
 ###
 # ENTRY
@@ -868,9 +831,8 @@ perform_remove_hysteria_binary() {
 }
 
 perform_install_hysteria_example_config() {
-	if [[ ! -d "$CONFIG_DIR" ]]; then
-		install_content -Dm644 "$(tpl_etc_hysteria_config_json)" "$CONFIG_DIR/config.json"
-		fi
+install_content -Dm644 "$(tpl_etc_hysteria_config_json)" "$CONFIG_DIR/config.json" ""
+ 
 }
 
 perform_install_hysteria_systemd() {
@@ -905,29 +867,12 @@ perform_install() {
 		_is_frash_install=1
 		fi
 		
-		local _is_update_required
-		
-		if [[ -n "$LOCAL_FILE" ]] || [[ -n "$VERSION" ]] || check_update; then
-			_is_update_required=1
-			fi
-			
-			if [[ "x$FORCE" == "x1" ]]; then
-				if [[ -z "$_is_update_required" ]]; then
-					note "Option '--force' is specified, re-install even if installed version is the latest."
-					fi
-					_is_update_required=1
-					fi
-					
-					if [[ -z "$_is_update_required" ]]; then
-						echo "$(tgreen)Installed version is up-to-dated, there is nothing to do.$(treset)"
-						return
-						fi
-						perform_install_hysteria_binary
+ 						perform_install_hysteria_binary
 						perform_install_hysteria_example_config
 						perform_install_hysteria_home_legacy
 						perform_install_hysteria_systemd
 						setup_ssl
-					        start_services
+					    start_services
 						if [[ -n "$_is_frash_install" ]]; then
 							echo
 							echo -e "$(tbold)Congratulation! AGN-UDP has been successfully installed on your server.$(treset)"
@@ -943,7 +888,7 @@ perform_install() {
 							echo
 							else
 								restart_running_services
-								
+								start_services
 								echo
 								echo -e "$(tbold)AGN-UDP has been successfully update to $VERSION.$(treset)"
 								echo
@@ -975,33 +920,20 @@ perform_remove() {
 			echo
 }
 
-perform_check_update() {
-	if check_update; then
-		echo
-		echo -e "$(tbold)Update available: $VERSION$(treset)"
-		echo
-		echo -e "$(tgreen)You can download and install the latest version by execute this script without any arguments.$(treset)"
-		echo
-		else
-			echo
-			echo "$(tgreen)Installed version is up-to-dated.$(treset)"
-			echo
-			fi
-}
+ 
 
 
 setup_ssl() {
 	echo "Installing ssl"
-	
-	openssl genrsa -out /etc/hysteria/hysteria.ca.key 2048
-	
-	openssl req -new -x509 -days 3650 -key /etc/hysteria/hysteria.ca.key -subj "/C=CN/ST=GD/L=SZ/O=Hysteria, Inc./CN=Hysteria Root CA" -out /etc/hysteria/hysteria.ca.crt
-	
-	openssl req -newkey rsa:2048 -nodes -keyout /etc/hysteria/hysteria.server.key -subj "/C=CN/ST=GD/L=SZ/O=Hysteria, Inc./CN=$DOMAIN" -out /etc/hysteria/hysteria.server.csr
-	
-	openssl x509 -req -extfile <(printf "subjectAltName=DNS:$DOMAIN,DNS:$DOMAIN") -days 3650 -in /etc/hysteria/hysteria.server.csr -CA /etc/hysteria/hysteria.ca.crt -CAkey /etc/hysteria/hysteria.ca.key -CAcreateserial -out /etc/hysteria/hysteria.server.crt	
-}
 
+	openssl genrsa -out /etc/hysteria/hysteria.ca.key 2048
+
+	openssl req -new -x509 -days 3650 -key /etc/hysteria/hysteria.ca.key -subj "/C=CN/ST=GD/L=SZ/O=Hysteria, Inc./CN=Hysteria Root CA" -out /etc/hysteria/hysteria.ca.crt
+
+	openssl req -newkey rsa:2048 -nodes -keyout /etc/hysteria/hysteria.server.key -subj "/C=CN/ST=GD/L=SZ/O=Hysteria, Inc./CN=$DOMAIN" -out /etc/hysteria/hysteria.server.csr
+
+	openssl x509 -req -extfile <(printf "subjectAltName=DNS:$DOMAIN,DNS:$DOMAIN") -days 3650 -in /etc/hysteria/hysteria.server.csr -CA /etc/hysteria/hysteria.ca.crt -CAkey /etc/hysteria/hysteria.ca.key -CAcreateserial -out /etc/hysteria/hysteria.server.crt	
+ }
 start_services() {
 	echo "Starting AGN-UDP"
 	apt update
@@ -1025,7 +957,7 @@ start_services() {
 
 
 main() {
-	parse_arguments "$@"
+parse_arguments "$@"
 	check_permission
 	check_environment
 	check_hysteria_user "hysteria"
@@ -1037,9 +969,7 @@ main() {
 	"remove")
 	perform_remove
 	;;
-	"check_update")
-	perform_check_update
-	;;
+	 
 	*)
 	error "Unknown operation '$OPERATION'."
 	;;
