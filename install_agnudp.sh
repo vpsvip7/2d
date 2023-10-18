@@ -19,13 +19,13 @@ DOMAIN="ACA-TU-IP"
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":1-65535"
+UDP_PORT=":36712"
 
 # OBFS
-OBFS="demo"
+OBFS="Z1234Z"
 
 # PASSWORDS
-PASSWORD="1234"
+PASSWORD=""
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
