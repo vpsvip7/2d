@@ -22,7 +22,7 @@ PROTOCOL="udp"
 UDP_PORT=":36712"
 
 # OBFS
-OBFS="Z1Z234Z"
+OBFS="Z1234Z"
 
 # PASSWORDS
 PASSWORD=""
@@ -680,7 +680,7 @@ tpl_etc_hysteria_config_json() {
   "disable_udp": false,
   "obfs": "$OBFS",
   "auth": {
-	"mode": "passwords",
+	"mode": "external",
 	"config": ["$PASSWORD"]
          }
 }
