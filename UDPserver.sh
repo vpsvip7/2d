@@ -84,7 +84,7 @@ if [[ ! -e $udp_file/UDPserver.sh ]]; then
 	echo '/etc/UDPserver/UDPserver.sh' > /usr/bin/udp
 	chmod +x /usr/bin/udp
 	repo_install
-	apt update -y && apt upgrade -y
+	apt update -y && apt update -y
 	ufw disable
 	apt remove netfilter-persistent -y
 	cp $(pwd)/$0 $udp_file/UDPserver.sh
@@ -93,7 +93,7 @@ if [[ ! -e $udp_file/UDPserver.sh ]]; then
 	title "${a102:-INSTALACION COMPLETA}"
 	print_center -ama "${a103:-Use el comando\nudp\npara ejecutar el menu}"
 	msg -bar
-	time_reboot 10
+	time_reboot 5
 fi
 
 [[ -e $lang ]] && newlang=$(cat $lang) && [[ ! $newlang = '' ]] && source $udp_file/lang/$newlang/UDPserver
