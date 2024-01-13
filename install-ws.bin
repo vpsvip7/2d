@@ -6,15 +6,15 @@ sleep 2
 cd
 
 #Install ws-epro
-wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://github.com/dj10go/base/raw/main/ws-epro' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1IbwfNpKpa1JzvXsDT-WgNpp5nWrklisG" -O /usr/local/bin/ws-epro && rm -rf /tmp/cookies.txt
+wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://github.com/dj10go/base/raw/main/ws-epro' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&ws-epro" -O /usr/local/bin/ws-epro && rm -rf /tmp/cookies.txt
 chmod +x /usr/local/bin/ws-epro
 
 #ws-epro service
-wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://raw.githubusercontent.com/dj10go/base/main/ws-epro.service' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10hGKYNZUMHdr4y-ZxMr0wKQpj9zSQRkZ" -O /etc/systemd/system/ws-epro.service && rm -rf /tmp/cookies.txt
+wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://raw.githubusercontent.com/dj10go/base/main/ws-epro.service' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&ws-epro.service" -O /etc/systemd/system/ws-epro.service && rm -rf /tmp/cookies.txt
 chmod +x /etc/systemd/system/ws-epro.service
 
 #ws-epro port
-wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://raw.githubusercontent.com/dj10go/Modulos1/main/port' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1h9QvOnXScplGTnfpbJ7KJDn4CDkwUKWa" -O /usr/bin/ws-port && rm -rf /tmp/cookies.txt
+wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://raw.githubusercontent.com/dj10go/Modulos1/main/port' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&port" -O /usr/bin/ws-port && rm -rf /tmp/cookies.txt
 chmod +x /usr/bin/ws-port
 
 #seting port
