@@ -495,7 +495,7 @@ case "$x" in
    source <(curl -sL https://raw.githubusercontent.com/vpsvip7/2d/main/wondershaper.sh)
    ;;
    45)
-   wget 'https://raw.githubusercontent.com/vpsvip7/2d/main/install-ws.bin' -O 'install-ws' && chmod +x install-ws && ./install-ws
+   wget -O /etc/wsproxy.py https://raw.githubusercontent.com/vpsvip7/1s/main/wsproxy.py
    sleep 4
    ;;
    46)
