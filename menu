@@ -314,8 +314,8 @@ stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ 
 autm=$(grep "menu;" /etc/profile > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 psi=$(ps x | grep "psiphond"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 udp=$(ps x | grep "udp"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
-slow=$(ps x | grep "slowdns"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
-v2ray=$(ps x | grep "v2ray"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+bn=$(ps x | grep "banner"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
+slow=$(ps x | grep "slowdns"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")v2ray=$(ps x | grep "v2ray"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 wn=$(ps x | grep "wondershaper"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 epro=$(ps x | grep "python"|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
 sp2=$(ps x | grep "speedtest "|grep -v grep > /dev/null && echo -e "\033[1;32m◉ " || echo -e "\033[1;31m○ ")
@@ -357,7 +357,7 @@ echo -e "\033[1;32m  Onlines:\033[1;37m $_onlin     \033[1;31mExpirados: \033[1;
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -e "\033[1;31m[\033[1;36m01\033[1;31m] \033[1;31m• \033[1;33mCREAR USUARIO \033[1;31m           [\033[1;36m11\033[1;31m] \033[1;37m• \033[1;33mSPEEDTEST $sp2 \033[1;31m
-[\033[1;36m02\033[1;31m] \033[1;37m• \033[1;33mCREAR USUARIO DEMO\033[1;31m       [\033[1;36m12\033[1;31m] \033[1;37m• \033[1;33mBANNER \033[1;31m
+[\033[1;36m02\033[1;31m] \033[1;37m• \033[1;33mCREAR USUARIO DEMO\033[1;31m       [\033[1;36m12\033[1;31m] \033[1;37m• \033[1;33mBANNER $bn\033[1;31m
 [\033[1;36m03\033[1;31m] \033[1;37m\033[1;37m• \033[1;31mELIMINAR USUARIO         \033[1;31m[\033[1;36m13\033[1;31m] \033[1;37m• \033[1;33mAutoinicio $autm \033[1;31m  
 [\033[1;36m04\033[1;31m] \033[1;37m• \033[1;93mMONITOR ONLINE \033[1;31m          [\033[1;36m14\033[1;31m] \033[1;37m• \033[1;33mLimpiar CPU\033[1;31m
 [\033[1;36m05\033[1;31m] \033[1;37m• \033[1;33mEDITAR FECHA \033[1;31m            [\033[1;36m15\033[1;31m] \033[1;37m• \033[1;33mBACKUP USER \033[1;31m
