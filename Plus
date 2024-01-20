@@ -81,7 +81,7 @@ wget https://raw.githubusercontent.com/leitura/SSHPLUS/master/Sistema/ShellBot.s
 chmod 777 ShellBot.sh > /dev/null 2>&1
 cd > /dev/null 2>&1
 #-----------------------------------------------------------------------------------------------------------------
-echo -e "\n\033[1;32mScrip Gratis! LIte\033[1;32m"
+echo -e "\n\033[1;32mScript Gratis! Lite\033[1;32m"
 sleep 2s
 echo ""
 [[ -f "$HOME/usuarios.db" ]] && {
