@@ -84,7 +84,7 @@ if [[ ! -e $udp_file/UDPserver.sh ]]; then
 	echo '/etc/UDPserver/UDPserver.sh' > /usr/bin/udp
 	chmod +x /usr/bin/udp
 	repo_install
-	apt update -y && apt update -y
+	apt update -y
 	ufw disable
 	apt remove netfilter-persistent -y
 	cp $(pwd)/$0 $udp_file/UDPserver.sh
