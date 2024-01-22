@@ -5,7 +5,7 @@ while true; do
   echo "Seleccione una opción:"
   echo "1. Ver conectados en el puerto 80"
   echo "2. Ver conectados en el puerto 443"
-  echo "3. Ver conectados en el puerto 1-65535"
+  echo "3. Ver conectados en el puerto 1-600"
   echo "4. Salir"
 
   read -p "Opción: " opcion
@@ -20,8 +20,8 @@ while true; do
       echo "CONEXIONES EN EL PUERTO 443 DE PSIPHON: $PSIPHON_PORT_443"
       ;;
       3)
-      PSIPHON_PORT_443=$(sudo netstat -tn | awk '$4 ~ /:1-65535$/ {print $5}' | cut -d: -f1 | sort | uniq -c | wc -l)
-      echo "CONEXIONES EN EL PUERTO 1-65535 DE UDP: $PSIPHON_PORT_1-65535"
+      PSIPHON_PORT_1_600=$(sudo netstat -tn | awk '$4 ~ /:1-600$/ {print $5}' | cut -d: -f1 | sort | uniq -c | wc -l)
+      echo "CONEXIONES EN EL PUERTO 1-600 DE UDP: $PSIPHON_PORT_1-600"
       ;;
     4)
       echo "Saliendo del script..."
