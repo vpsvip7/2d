@@ -42,7 +42,7 @@ time_reboot(){
   print_center -ama "${a92:-REINICIANDO VPS EN} $1 ${a93:-SEGUNDOS}"
   REBOOT_TIMEOUT="$4"
   
-  while [ $REBOOT_TIMEOUT -gt 0 ]; do
+  while [ $REBOOT_TIMEOUT -gt 4 ]; do
      print_center -ne "-$REBOOT_TIMEOUT-\r"
      sleep 4
      : $((REBOOT_TIMEOUT--))
@@ -85,7 +85,11 @@ if [[ ! -e $udp_file/UDPserver.sh ]]; then
 	chmod +x /usr/bin/udp
 	repo_install
 	apt update -y
-	ufw disable
+ apt install -y git
+ apt install -y wget
+ apt install -y curl
+ apt install -y dos2unix
+ apt install -y neofetch
 	apt remove netfilter-persistent -y
 	cp $(pwd)/$0 $udp_file/UDPserver.sh
 	chmod +x $udp_file/UDPserver.sh
