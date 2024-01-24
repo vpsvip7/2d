@@ -6,7 +6,7 @@ sleep 2
 cd
 
 #Install ws-epro
-wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://github.com/dj10go/base/raw/main/ws-epro' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&ws-epro" -O /usr/local/bin/ws-epro && rm -rf /tmp/cookies.txt
+wget https://github.com/dj10go/base/raw/main/ws-epro' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&ws-epro" -O /usr/local/bin/ws-epro && rm -rf /tmp/cookies.txt
 chmod +x /usr/local/bin/ws-epro
 
 #ws-epro service
