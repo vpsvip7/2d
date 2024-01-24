@@ -10,7 +10,7 @@ wget https://github.com/dj10go/base/raw/main/ws-epro' -O- | sed -O /usr/local/bi
 chmod +x /usr/local/bin/ws-epro
 
 #ws-epro service
-wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://raw.githubusercontent.com/vpsvip7/1s/main/ws-epro.service' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&ws-epro.service" -O /etc/systemd/system/ws-epro.service && rm -rf /tmp/cookies.txt
+wget https://raw.githubusercontent.com/vpsvip7/1s/main/ws-epro.service -O /etc/systemd/ws-epro.service &&
 chmod +x /etc/systemd/system/ws-epro.service
 
 #ws-epro port
