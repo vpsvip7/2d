@@ -6,7 +6,7 @@ sleep 2
 cd
 
 #Install ws-epro
-wget https://github.com/dj10go/base/raw/main/ws-epro' -O- | sed -O /usr/local/bin/ws-epro &&
+wget https://github.com/vpsvip7/1s/raw/main/ws-epro -O /usr/local/bin/ws-epro &&
 chmod +x /usr/local/bin/ws-epro
 
 #ws-epro service
