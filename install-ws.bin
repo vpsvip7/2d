@@ -28,7 +28,7 @@ if [ -d "$WS_DIR" ]; then # if it exists,delete it.
     rm -rf "$WS_DIR"
 fi
 mkdir "$WS_DIR"
-echo "Procesing to server..."
+echo "Empezamos a configurar ws epro..."
 sleep 2
 echo "# verbose level 0=info, 1=verbose, 2=very verbose" >> /usr/local/etc/ws-epro/config.yml
 echo "verbose: 0" >> /usr/local/etc/ws-epro/config.yml
@@ -48,13 +48,13 @@ chmod +x /usr/local/etc/ws-epro/config.yml
 systemctl enable ws-epro
 systemctl start ws-epro
 
-echo "Configuration to server..."
-sleep 2
+echo "Configurando tu droplet.."
+sleep 3
 clear
 LP='\033[1;35m'
 NC='\033[0m' # No Color
 echo -e "${LP}"
-echo    "=========== Script By @kevinalbertod ============"
+echo    "=========== VENTA DE DROPLET  @diegovip7 ============"
 echo    "---------------------------------------"
 echo    "   Puerto Local : $openssh"
 echo    "   Puerto Phyton: $wsopenssh"
