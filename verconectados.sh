@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-  echo "BIENVENIDO AL MENÚ PARA VER CONECTADOS"
+  echo "BIENVENIDO AL MENU PARA VER CONECTADOS"
   echo "Seleccione una opción:"
   echo "1. Ver conectados en el puerto 80"
   echo "2. Ver conectados en el puerto 443"
