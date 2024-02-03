@@ -7,7 +7,7 @@ clear
 scor='\033[0m'
 echo -e "\E[44;1;37m       ELEGIR   UNA   OPCION      \E[0m"
 echo -e "  [\033[1;36m1:\033[1;31m] \033[1;37m• \033[1;32mIniciar -Reiniciar Psi \033[1;31m"
-echo -e "  [\033[1;36m2:\033[1;31m] \033[1;37m• \033[1;33mVerificar Screen \033[1;31m    "
+echo -e "  [\033[1;36m2:\033[1;31m] \033[1;37m• \033[1;33mInstalar Psiphon \033[1;31m    "
 echo -e "   [\033[1;36m3:\033[1;31m] \033[1;37m• \033[1;33mVer Puertos Activos \033[1;31m      \E[0m"
 echo  -e "    [\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mVer Codigo Tarjet \033[1;31m  "
 echo  -e  "  [\033[1;36m5:\033[1;31m] \033[1;37m• \033[1;33mTestear Velocidad \033[1;31m  "
@@ -25,8 +25,8 @@ cd /root/psi && screen -dmS PSI ./psiphond run
             echo -ne "\n\033[1;31mListo \033[1;33mPsiphon Iniciado o  \033[1;32mReiniciado!\033[0m"; read
            ;;
         2) clear
-        which screen
-           sleep 5 
+        cd /root && mkdir psi && cd /root/psi && wget https://raw.githubusercontent.com/Psiphon-Labs/psiphon-tunnel-core-binaries/master/psiphond/psiphond && chmod 777 psiphond && ./psiphond --ipaddress 0.0.0.0 --protocol FRONTED-MEEK-OSSH:443 generate && screen -dmS PSI ./psiphond run && cat /root/psi/server-entry.dat;echo ''
+           sleep 6 
             ;;
         3) clear
             netstat -tnpl
