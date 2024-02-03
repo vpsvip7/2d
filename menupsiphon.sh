@@ -6,15 +6,15 @@ cor3='\033[1;35m'
 clear
 scor='\033[0m'
 echo -e "\E[44;1;37m       ELEGIR   UNA   OPCION      \E[0m"
-echo -e "  [\033[1;36m1:\033[1;31m] \033[1;37m• \033[1;32mIniciar -Reiniciar Psi \033[1;31m"
-echo -e "  [\033[1;36m2:\033[1;31m] \033[1;37m• \033[1;33mInstalar Psiphon \033[1;31m    "
-echo -e "   [\033[1;36m3:\033[1;31m] \033[1;37m• \033[1;33mVer Puertos Activos \033[1;31m      \E[0m"
-echo  -e "    [\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mVer Codigo Tarjet \033[1;31m  "
-echo  -e  "  [\033[1;36m5:\033[1;31m] \033[1;37m• \033[1;33mTestear Velocidad \033[1;31m  "
-echo  -e  "   [\033[1;36m5:\033[1;31m] \033[1;37m• \033[1;33mProbar Velocidsd \033[1;31m  "
-echo  -e " [\033[1;36m7:\033[1;31m] \033[1;37m• \033[1;33mLimpiar Ram \033[1;31m"
-echo  -e "     [\033[1;36m8:\033[1;31m] \033[1;37m• \033[1;33mBorrar Psiphon \033[1;31m "
-echo  -e "  [\033[1;36m41\033[1;31m] \033[1;37m• \033[1;33mVer Conectados \033[1;31m "
+echo -e "       [\033[1;36m 1:\033[1;31m] \033[1;37m• \033[1;32mINICIAR -REINICIAR Psi \033[1;31m"
+echo -e "       [\033[1;36m 2:\033[1;31m] \033[1;37m• \033[1;33mINSTALAR PSIPHON 443 \033[1;31m    "
+echo -e "  ... [\033[1;36m 3:\033[1;31m] \033[1;37m• \033[1;33mVER PUERTOS ACTIVOS \033[1;31m      \E[0m"
+echo  -e "  .  [\033[1;36m 4: \033[1;31m] \033[1;37m• \033[1;33mVER CODIGO TARJET \033[1;31m  "
+echo  -e  "    [\033[1;36m 5:\033[1;31m] \033[1;37m• \033[1;33mINSTALAR PSIPHON 80 \033[1;31m  "
+echo  -e  "    [\033[1;36m 6:\033[1;31m] \033[1;37m• \033[1;33mPROBAR VELOCIDAD \033[1;31m  "
+echo  -e "     [\033[1;36m 7:\033[1;31m] \033[1;37m• \033[1;33mLimpiar Ram \033[1;31m"
+echo  -e "     [\033[1;36m 8:\033[1;31m] \033[1;37m• \033[1;33mBorrar Psiphon \033[1;31m "
+echo  -e "  [\033[1;36m 9: \033[1;31m] \033[1;37m• \033[1;33mVer Conectados \033[1;31m "
 
 #leemos del teclado sentado
 read n
@@ -26,26 +26,27 @@ cd /root/psi && screen -dmS PSI ./psiphond run
            ;;
         2) clear
         cd /root && mkdir psi && cd /root/psi && wget https://raw.githubusercontent.com/Psiphon-Labs/psiphon-tunnel-core-binaries/master/psiphond/psiphond && chmod 777 psiphond && ./psiphond --ipaddress 0.0.0.0 --protocol FRONTED-MEEK-OSSH:443 generate && screen -dmS PSI ./psiphond run && cat /root/psi/server-entry.dat;echo ''
-           sleep 6 
+           echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu2!\033[0m"; read 
             ;;
         3) clear
             netstat -tnpl
              sleep 6
            ;; 
         4) clear
-             cd /root/psi&&cat /root/psi/server-entry.dat;echo ''
-            sleep 15
+        cd /root/psi&&cat /root/psi/server-entry.dat;echo ''
+       echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu2!\033[0m"; read
            ;;
-        5) speedtest
-        echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu!\033[0m"; read
+        5) cd /root && mkdir psi && cd /root/psi && wget https://raw.githubusercontent.com/Psiphon-Labs/psiphon-tunnel-core-binaries/master/psiphond/psiphond && chmod 777 psiphond && ./psiphond --ipaddress 0.0.0.0 --protocol FRONTED-MEEK-OSSH:80 generate && screen -dmS PSI ./psiphond run && cat /root/psi/server-entry.dat;echo ''
+        echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu2!\033[0m"; read
          ;;
-        6) apt update 
-             menu;;
+        6) speedtest
+             menu2;;
         7)     sync & sysctl -w vm.drop_caches=3 
-           menu   ;;
+           menu2   ;;
          8)  rm -rf /root/psi
-             menu;;
+             menu2;;
           9)  ./verconectados.sh
-             menu;;
-        *) echo "Opción Incorrecta";;
+        echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu2!\033[0m"; read
+             ;;
+        *) echo "OPCION INCORREPTA ";;
 esac
