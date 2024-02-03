@@ -5,7 +5,7 @@ while true; do
   echo "Seleccione una opción:"
   echo "1. Ver conectados en el puerto 80"
   echo "2. Ver conectados en el puerto 443"
-  echo "3. Ver conectados en el puerto 1-600"
+  echo "3. INSTALAR VER Conectados"
   echo "4. Salir"
 
   read -p "Opción: " opcion
@@ -19,10 +19,8 @@ while true; do
       PSIPHON_PORT_443=$(sudo netstat -tn | awk '$4 ~ /:443$/ {print $5}' | cut -d: -f1 | sort | uniq -c | wc -l)
       echo "CONEXIONES EN EL PUERTO 443 DE PSIPHON: $PSIPHON_PORT_443"
       ;;
-      3)
-      PSIPHON_PORT_1_600=$(sudo netstat -tn | awk '$4 ~ /:1-600$/ {print $5}' | cut -d: -f1 | sort | uniq -c | wc -l)
-      echo "CONEXIONES EN EL PUERTO 1-600 DE UDP: $PSIPHON_PORT_1-600"
-      ;;
+      3)  
+        wget https://raw.githubusercontent.com/vpsvip7/2d/main/verconectados.sh && chmod +x verconectados.sh &&  ./verconectados.sh  ;;
     4)
       echo "Saliendo del script..."
       break
