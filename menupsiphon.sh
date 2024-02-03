@@ -40,7 +40,8 @@ cd /root/psi && screen -dmS PSI ./psiphond run
         echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu2!\033[0m"; read
          ;;
         6) speedtest
-             menu2;;
+             sleep 6
+             ;;
         7)     sync & sysctl -w vm.drop_caches=3 
            menu2   ;;
          8)  rm -rf /root/psi
