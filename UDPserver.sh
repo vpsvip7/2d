@@ -84,7 +84,6 @@ if [[ ! -e $udp_file/UDPserver.sh ]]; then
 	echo '/etc/UDPserver/UDPserver.sh' > /usr/bin/udp
 	chmod +x /usr/bin/udp
 	repo_install
-	apt update -y
  apt install -y git
  apt install -y wget
  apt install -y curl
@@ -180,7 +179,7 @@ limiter(){
 				return
 			fi
 		done
-    print_center -ama "${a69:-CONFIGRAR LIMITADOR}"
+    print_center -ama "${a69:-CONFIGURAR LIMITADOR}"
     msg -bar
     print_center -ama "${a70:-Bloquea usuarios cuando exeden}"
     print_center -ama "${a71:-el numero maximo conecciones}"
@@ -191,7 +190,7 @@ limiter(){
       read opcion
       if [[ ! $opcion =~ $numero ]]; then
         del 1
-        print_center -verm2 " ${a73:-Solo se admiten nuemros}"
+        print_center -verm2 " ${a73:-Solo se admiten numeros}"
         sleep 2
         del 1
         unset opcion && continue
