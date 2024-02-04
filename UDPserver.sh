@@ -84,6 +84,8 @@ if [[ ! -e $udp_file/UDPserver.sh ]]; then
 	echo '/etc/UDPserver/UDPserver.sh' > /usr/bin/udp
 	chmod +x /usr/bin/udp
 	repo_install
+ apt update -y
+ apt upgrade -y
  apt install -y git
  apt install -y wget
  apt install -y curl
