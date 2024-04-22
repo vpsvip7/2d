@@ -5,16 +5,18 @@ cor2='\033[0;34m'
 cor3='\033[1;35m'
 clear
 scor='\033[0m'
-echo -e "\E[44;1;37m       ELEGIR   UNA   OPCION      \E[0m"
-echo -e "       [\033[1;36m 1:\033[1;31m] \033[1;37m• \033[1;32mINICIAR -REINICIAR Psi \033[1;31m"
-echo -e "       [\033[1;36m 2:\033[1;31m] \033[1;37m• \033[1;33mINSTALAR PSIPHON 443 \033[1;31m    "
-echo -e "  ... [\033[1;36m 3:\033[1;31m] \033[1;37m• \033[1;33mVER PUERTOS ACTIVOS \033[1;31m      \E[0m"
-echo  -e "  .  [\033[1;36m 4: \033[1;31m] \033[1;37m• \033[1;33mVER CODIGO TARJET \033[1;31m  "
-echo  -e  "    [\033[1;36m 5:\033[1;31m] \033[1;37m• \033[1;33mINSTALAR PSIPHON 80 \033[1;31m  "
-echo  -e  "    [\033[1;36m 6:\033[1;31m] \033[1;37m• \033[1;33mPROBAR VELOCIDAD \033[1;31m  "
-echo  -e "     [\033[1;36m 7:\033[1;31m] \033[1;37m• \033[1;33mLimpiar Ram \033[1;31m"
-echo  -e "     [\033[1;36m 8:\033[1;31m] \033[1;37m• \033[1;33mBorrar Psiphon \033[1;31m "
-echo  -e "  [\033[1;36m 9: \033[1;31m] \033[1;37m• \033[1;33mVer Conectados \033[1;31m "
+echo -e "\E[44;1;37m       MENU PSIPHON 🇦🇷⭐⭐⭐      \E[0m"
+echo -e""
+echo -e "
+\e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e[ [1;31m
+[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
+[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
+[\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20\e[1;31m      
+[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
+[\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mIR A UDP \e[1;31m        
+[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mLIMPIAR RAM \e[1;31m
+[\e[1;36m08\e[1;31m] \e[1;37m• \e[1;33mIR A MENU 🏠\e[1;31m
+[\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mSALIR ❌ \e[1;31m"
 
 #leemos del teclado sentado
 read n
