@@ -8,9 +8,9 @@ scor='\033[0m'
 echo -e "\E[44;1;37m       ELEGIR   UNA   OPCION      \E[0m"
 echo ""
 echo -e "\e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e[1;31m [1;31m
-[\e[1;36m2\e[1;31m] \e[1;37m• \e[1;33mREMOVER HOST \e[1;31m  \e[1;31m
+[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
 [\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mREINICIAR SISTEMA \e[1;31m
-[\e[1;36m4\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20       \e[1;31m        [\e[1;36m11\e[1;31m] \e[1;37m• \e[1;33mBORRAR SCRIPT \e[1;31m
+[\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20       \e[1;31m        [\e[1;36m11\e[1;31m] \e[1;37m• \e[1;33mBORRAR SCRIPT \e[1;31m
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTOINSTALADOR $stsf\e[1;31m  
 [\e[1;36m6\e[1;31m] \e[1;37m• \e[1;33mUpdate $stsbot\e[1;31m        
        [\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mSALIR❌ \e[1;32m<\e[1;33m<\e[1;31m<\e[1;31m
@@ -26,7 +26,7 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
             udp
            ;;
         2) clear
-        rm -rf /root/psi
+        rm -rf /root/holamundo.sh
            sleep 5 
             ;;
         3) clear
