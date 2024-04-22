@@ -7,14 +7,14 @@ clear
 scor='\033[0m'
 echo -e "\E[44;1;37m       ELEGIR   UNA   OPCION      \E[0m"
 echo ""
-echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mUDP DEBIAN Y UBUNTU \033[1;31m  [\033[1;36m8\033[1;31m] \033[1;37m• \033[1;33mEDITAR CONTRASEÑA  \033[1;31m
-[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mREMOVER HOST \033[1;31m       [\033[1;36m9\033[1;31m] \033[1;37m• \033[1;33mAUTO INICIO $autm \033[1;31m
-[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mREINICIAR SISTEMA \033[1;31m  [\033[1;36m10\033[1;31m] $var01 \033[1;33mACTUALIZAR SCRIPT \033[1;31m
-[\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mUDP UBUNTU 20       \033[1;31m        [\033[1;36m11\033[1;31m] \033[1;37m• \033[1;33mBORRAR SCRIPT \033[1;31m
-[\033[1;36m5\033[1;31m] \033[1;37m• \033[1;33mUDP AUTOINSTALADOR $stsf\033[1;31m    [\033[1;36m12\033[1;31m] \033[1;37m• \033[1;33mVOLVER \033[1;32m<\033[1;33m<\033[1;31m< \033[1;31m
-[\033[1;36m6\033[1;31m] \033[1;37m• \033[1;33mUpdate $stsbot\033[1;31m        
-       [\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSALIR❌ \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m
-[\033[1;36m7\033[1;31m] \033[1;37m• \033[1;33mLimpiar RAM $stsbotteste\033[1;31m"
+echo -e "\e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e[1;31m  [\e[1;36m08\e[1;31m] \e[1;37m• \e[1;33mEDITAR CONTRASEÑA  \e[1;31m
+[\e[1;36m2\e[1;31m] \e[1;37m• \e[1;33mREMOVER HOST \e[1;31m       [\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mAUTO INICIO $autm \e[1;31m
+[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mREINICIAR SISTEMA \e[1;31m  [\e[1;36m10\e[1;31m] $var01 \e[1;33mACTUALIZAR SCRIPT \e[1;31m
+[\e[1;36m4\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20       \e[1;31m        [\e[1;36m11\e[1;31m] \e[1;37m• \e[1;33mBORRAR SCRIPT \e[1;31m
+[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTOINSTALADOR $stsf\e[1;31m    [\e[1;36m12\e[1;31m] \e[1;37m• \e[1;33mVOLVER \e[1;32m<\e[1;33m<\e[1;31m< \e[1;31m
+[\e[1;36m6\e[1;31m] \e[1;37m• \e[1;33mUpdate $stsbot\e[1;31m        
+       [\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mSALIR❌ \e[1;32m<\e[1;33m<\e[1;31m<\e[1;31m
+[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mLimpiar RAM $stsbotteste\e[1;31m"
 
 #leemos del teclado sentado
 read n
