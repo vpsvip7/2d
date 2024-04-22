@@ -8,14 +8,14 @@ scor='\033[0m'
 echo -e "\E[44;1;37m       MENU PSIPHON 🇦🇷⭐⭐⭐      \E[0m"
 echo -e""
 echo -e "
-\e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e[ [1;31m
-[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
-[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
-[\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20\e[1;31m      
-[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
-[\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mIR A UDP \e[1;31m        
+\e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mINICIAR o REINICIAR PSIPHON \e[ [1;31m
+[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mINSTALAR PSIPHON 443 \e[1;31m  \e[1;31m
+[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER PUERTOS \e[1;31m
+[\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mVER CODIGO TARGET\e[1;31m      
+[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mINSTALAR PSIPHON 80 \e[1;31m  
+[\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mTEST Velocidad \e[1;31m        
 [\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mLIMPIAR RAM \e[1;31m
-[\e[1;36m08\e[1;31m] \e[1;37m• \e[1;33mIR A MENU 🏠\e[1;31m
+[\e[1;36m08\e[1;31m] \e[1;37m• \e[1;33mBORRAR PSIPHON ❌\e[1;31m
 [\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mSALIR ❌ \e[1;31m"
 
 #leemos del teclado sentado
