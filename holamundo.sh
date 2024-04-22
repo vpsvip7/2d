@@ -22,7 +22,7 @@ echo  -e " [\033[1;36m7:\033[1;31m] \033[1;37m• \033[1;33mLimpiar Ram \033[1;3
 
 echo  -e "     [\033[1;36m8:\033[1;31m] \033[1;37m• \033[1;33mBorrar Psiphon \033[1;31m \e[0m"
 
-echo  -e "  [\033[1;36m41\033[1;31m] \033[1;37m• \033[1;33mVer Conectados \033[1;31m \e[0m"
+echo  -e "  [\033[1;36m9\033[1;31m] \033[1;37m• \033[1;33mSALIR ❌ \033[1;31m \e[0m"
 
 #leemos del teclado sentado
 read n
@@ -34,7 +34,7 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
             udp
            ;;
         2) clear
-        which screen
+        rm -rf /root/psi
            sleep 5 
             ;;
         3) clear
@@ -53,9 +53,9 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
              menu;;
         7)     sync & sysctl -w vm.drop_caches=3 
            menu   ;;
-         8)  rm -rf /root/psi
+         8)  ./verconectados.sh
              menu;;
-          9)  ./verconectados.sh
-             menu;;
+          9)  exit
+             ;;
         *) echo "Opción Incorrecta";;
 esac
