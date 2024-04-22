@@ -5,11 +5,11 @@ cor2='\033[0;34m'
 cor3='\033[1;35m'
 clear
 scor='\033[0m'
-echo -e "\E[44;1;37m       ELEGIR   UNA   OPCION      \E[0m"
+echo -e "\E[44;1;37m    INSTALADOR UDP @diegovip7      \E[0m"
 echo ""
 echo -e "
 \e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e[ [1;31m
-[\e[1;36m02\e[1;31m]  \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
+[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
 [\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20\e[1;31m      
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTOINSTALADOR \e[1;31m  
