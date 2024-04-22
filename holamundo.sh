@@ -23,7 +23,8 @@ read n
 
 case $n in
         1) clear
-wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 install.sh && ./install.sh
+
+sudo rm -rf /root/install.sh && wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 install.sh && ./install.sh
             echo -ne "\n\033[1;31mListo \033[1;33mComando menu  \033[1;32mPara terminar de instalar!\033[0m"; read
             udp
            ;;
@@ -36,6 +37,7 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
              sleep 6
            ;; 
         4) clear
+    sudo rm -rf /root/UDPserver.sh &&
              wget https://raw.githubusercontent.com/vpsvip7/2d/main/UDPserver.sh && chmod 777 UDPserver.sh && ./UDPserver.sh
             echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu!\033[0m"; read
             udp
@@ -47,7 +49,7 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
         6) udp
            ;;
         7)     sync & sysctl -w vm.drop_caches=3 
-           holamundo.sh   ;;
+           menu  ;;
          8)  menu
             ;;
           9)  exit
