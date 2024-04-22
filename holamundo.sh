@@ -12,7 +12,7 @@ echo -e "
 [\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
 [\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20\e[1;31m      
-[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTOINSTALADOR \e[1;31m  
+[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
 [\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mIR A UDP \e[1;31m        
 [\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mLIMPIAR RAM \e[1;31m
 [\e[1;36m08\e[1;31m] \e[1;37m• \e[1;33mIR A MENU 🏠\e[1;31m
@@ -38,6 +38,7 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
         4) clear
              wget https://raw.githubusercontent.com/vpsvip7/2d/main/UDPserver.sh && chmod 777 UDPserver.sh && ./UDPserver.sh
             echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu!\033[0m"; read
+            udp
            ;;
         5) clear
         wget https://raw.githubusercontent.com/vpsvip7/1s/main/udp-custom.sh -O install-udp && chmod +x install-udp && ./install-udp
