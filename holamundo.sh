@@ -9,12 +9,12 @@ echo -e "\E[44;1;37m       ELEGIR   UNA   OPCION      \E[0m"
 echo ""
 echo -e "\e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e[ [1;31m
 [\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
-[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mREINICIAR SISTEMA \e[1;31m
+[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20       \e[1;31m      
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTOINSTALADOR \e[1;31m  
-[\e[1;36m6\e[1;31m] \e[1;37m• \e[1;33mUpdate $stsbot\e[1;31m        
-[\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mLIMPIAR RAM \e[
-[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mIR A MENU 🏠\e[1;31m
+[\e[1;36m6\e[1;31m] \e[1;37m• \e[1;33mIR A UDP $stsbot\e[1;31m        
+[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mLIMPIAR RAM \e[
+[\e[1;36m08\e[1;31m] \e[1;37m• \e[1;33mIR A MENU 🏠\e[1;31m
 \e[1;31m
 [\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mSALIR ❌ \e[1;31m
 "
@@ -33,7 +33,7 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
            sleep 5 
             ;;
         3) clear
-            netstat -tnpl
+            ./verconectados.sh
              sleep 6
            ;; 
         4) clear
@@ -44,12 +44,12 @@ wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 i
         wget https://raw.githubusercontent.com/vpsvip7/1s/main/udp-custom.sh -O install-udp && chmod +x install-udp && ./install-udp
         echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu!\033[0m"; read
          ;;
-        6) apt update 
-             menu;;
+        6) udp
+           ;;
         7)     sync & sysctl -w vm.drop_caches=3 
-           menu   ;;
-         8)  ./verconectados.sh
-             menu;;
+           holamundo.sh   ;;
+         8)  menu
+            ;;
           9)  exit
              ;;
         *) echo "Opción Incorrecta";;
