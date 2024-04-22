@@ -32,7 +32,8 @@ cd /root/psi && screen -dmS PSI ./psiphond run
             ;;
         3) clear
             netstat -tnpl
-             sleep 6
+             sleep 3
+             menu
            ;; 
         4) clear
         cd /root/psi&&cat /root/psi/server-entry.dat;echo ''
