@@ -11,10 +11,10 @@ echo -e "\e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e
 [\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
 [\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mREINICIAR SISTEMA \e[1;31m
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20       \e[1;31m      
-[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTOINSTALADOR $stsf\e[1;31m  
+[\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTOINSTALADOR \e[1;31m  
 [\e[1;36m6\e[1;31m] \e[1;37m• \e[1;33mUpdate $stsbot\e[1;31m        
-       [\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mSALIR❌ \e[1;32m<\e[1;33m<\e[1;31m<\e[1;31m
-[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mLimpiar RAM $stsbotteste\e[1;31m"
+[\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mLIMPIAR RAM \e[
+[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mSalir \e[1;31m"
 
 #leemos del teclado sentado
 read n
