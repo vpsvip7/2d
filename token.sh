@@ -140,7 +140,7 @@ echo -e "\e[32m  Puerto Dropbear: \e[0m"$dropbearport
 echo -e "\e[32m  Puerto SSL: \e[0m"$stunnel4port
 echo -e "\e[32m  Puertos Squid: \e[0m"$squidport
 echo -e "\e[32m  Puertos Openvpn: \e[0m"$openvpnport
-echo -e "\e[32m  Puertos python: \e[0m"$openvpnport
+echo -e "\e[32m  Puertos python: \e[0m"$pyport
 echo -e "$bar1"
 fi
 }
