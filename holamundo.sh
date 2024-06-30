@@ -24,7 +24,7 @@ read n
 case $n in
         1) clear
 
-sudo rm -rf /root/install.sh && wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 install.sh && ./install.sh
+ rm -rf /root/install.sh && wget https://raw.githubusercontent.com/vpsvip7/1s/main/install.sh && chmod 777 install.sh && ./install.sh
             echo -ne "\n\033[1;31mListo \033[1;33mComando menu  \033[1;32mPara terminar de instalar!\033[0m"; read
             udp
            ;;
