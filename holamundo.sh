@@ -37,7 +37,7 @@ case $n in
              sleep 6
            ;; 
         4) clear
-    sudo rm -rf /root/UDPserver.sh &&
+     rm -rf /root/UDPserver.sh &&
              wget https://raw.githubusercontent.com/vpsvip7/2d/main/UDPserver.sh && chmod 777 UDPserver.sh && ./UDPserver.sh
             echo -ne "\n\033[1;31mEnter \033[1;33m Para volver al  \033[1;32mMenu!\033[0m"; read
             udp
