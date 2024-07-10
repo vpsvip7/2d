@@ -11,7 +11,7 @@ echo -e "
 \e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN Y UBUNTU \e[ [1;31m
 [\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
 [\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
-[\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 20\e[1;31m      
+[\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 18\e[1;31m      
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
 [\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mIR A UDP \e[1;31m        
 [\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mLIMPIAR RAM \e[1;31m
