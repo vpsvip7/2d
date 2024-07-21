@@ -63,7 +63,7 @@ inst_py () {
 
 pkill -f 80
 pkill python
-apt install python -y
+apt install python3 -y
 apt install screen -y
 
 pt=$(netstat -nplt |grep 'sshd' | awk -F ":" NR==1{'print $2'} | cut -d " " -f 1)
