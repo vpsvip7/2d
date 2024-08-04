@@ -9,7 +9,7 @@ echo -e "\E[44;1;37m    INSTALADOR UDP @diegovip7      \E[0m"
 echo ""
 echo -e "
 \e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN  \e[ [1;31m
-[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mREMOVER Holamundo \e[1;31m  \e[1;31m
+[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mELIMINAR UDP \e[1;31m  \e[1;31m
 [\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 18\e[1;31m      
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
@@ -29,7 +29,7 @@ case $n in
             udp
            ;;
         2) clear
-        rm -rf /root/holamundo.sh
+        rm -rf /root/udp
            sleep 5 
             ;;
         3) clear
