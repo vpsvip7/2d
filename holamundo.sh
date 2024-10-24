@@ -14,7 +14,7 @@ echo -e "
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 18\e[1;31m      
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
 [\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mIR A Menu UDP \e[1;31m        
-[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mUDP Redjoker256 \e[1;31m
+[\e[1;36m07\e[1;31m] \e[1;37m• \e[1;33mUDP by Redjoker256 \e[1;31m
 [\e[1;36m08\e[1;31m] \e[1;37m• \e[1;33mIR AL MENU 🏠\e[1;31m
 [\e[1;36m09\e[1;31m] \e[1;37m• \e[1;33mSALIR ❌ \e[1;31m"
 
