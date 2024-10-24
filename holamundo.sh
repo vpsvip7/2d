@@ -10,7 +10,7 @@ echo ""
 echo -e "
 \e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN  \e[ [1;31m
 [\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mELIMINAR UDP \e[1;31m  \e[1;31m
-[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mVER CONECTADOS \e[1;31m
+[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mUDP Donweb by Joaquin \e[1;31m      
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 18\e[1;31m      
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
 [\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mIR A Menu UDP \e[1;31m        
@@ -33,7 +33,7 @@ case $n in
            sleep 5 
             ;;
         3) clear
-            ./verconectados.sh
+            wget https://raw.githubusercontent.com/joaquin1444/udp/main/install_udp.sh -O install_udp.sh && chmod +x install_udp.sh && ./install_udp.sh
              sleep 6
            ;; 
         4) clear
