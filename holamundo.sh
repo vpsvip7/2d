@@ -9,8 +9,8 @@ echo -e "\E[44;1;37m    INSTALADOR UDP @diegovip7      \E[0m"
 echo ""
 echo -e "
 \e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m• \e[1;33mUDP DEBIAN  \e[ [1;31m
-[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mELIMINAR UDP \e[1;31m  \e[1;31m
-[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mUDP Donweb by Joaquin \e[1;31m      
+[\e[1;36m02\e[1;31m] \e[1;37m• \e[1;33mTest Velocidad UDP \e[1;31m  \e[1;31m
+[\e[1;36m03\e[1;31m] \e[1;37m• \e[1;33mUDP Donweb by Joaquin 🇦🇷 \e[1;31m      
 [\e[1;36m04\e[1;31m] \e[1;37m• \e[1;33mUDP UBUNTU 18\e[1;31m      
 [\e[1;36m05\e[1;31m] \e[1;37m• \e[1;33mUDP AUTO INSTALACION \e[1;31m  
 [\e[1;36m06\e[1;31m] \e[1;37m• \e[1;33mIR A Menu UDP \e[1;31m        
@@ -29,8 +29,9 @@ case $n in
             udp
            ;;
         2) clear
-        rm -rf /root/udp
-           sleep 5 
+        speedtest
+           echo -ne "\n\033[1;31mListo \033[1;33mComando menu  \033[1;32mPara terminar de instalar!\033[0m"; read
+            udp
             ;;
         3) clear
             wget https://raw.githubusercontent.com/joaquin1444/udp/main/install_udp.sh -O install_udp.sh && chmod +x install_udp.sh && ./install_udp.sh
