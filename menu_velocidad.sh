@@ -1,12 +1,13 @@
 #!/bin/bash
 
 while true; do
-  echo "BIENVENIDO AL MENÚ PARA VER CONECTADOS"
+  echo "MENÚ LIMiTADOr de Velocidad"
   echo "Seleccione una opción:"
   echo "1. INSTALAR LIMITADOR"
   echo "2. LIMITAR A 5MB APROX "
   echo "3. LIMITAR A 8MB APROX "
-  echo "4. Salir"
+  echo "4. Medir la Velocidad de tu maquina "
+  echo "5. Salir"
 
   read -p "Opción: " opcion
 
@@ -23,7 +24,11 @@ while true; do
       ./limit_bandwidth.sh eth0 15mbit 15mbit
       echo "Limitar a 8mb aprox"
       ;;
-    4)
+4)
+      speedtest
+      echo "Testear la velocidad de tu maquina"
+      ;;
+    5)
       echo "Saliendo del script..."
       break
       ;;
