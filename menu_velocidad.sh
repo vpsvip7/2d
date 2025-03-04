@@ -18,11 +18,11 @@ echo "4. LIMITAR A 10MB APROX "
       echo "INSTALANDO LIMITADOR"
       ;;
     2)
-      ./limit_bandwidth.sh eth0 10mbit 15mbit
+      ./limit_bandwidth.sh eth0 10mbit 10mbit
       echo "Limitar a 5mb aprox"
       ;;
     3)
-      ./limit_bandwidth.sh eth0 12mbit 15mbit
+      ./limit_bandwidth.sh eth0 12mbit 12mbit
       echo "Limitar a 8mb aprox"
       ;;
 4)
