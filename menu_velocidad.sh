@@ -6,8 +6,9 @@ while true; do
   echo "1. INSTALAR LIMITADOR"
   echo "2. LIMITAR A 5MB APROX "
   echo "3. LIMITAR A 8MB APROX "
-  echo "4. Medir la Velocidad de tu maquina "
-  echo "5. Salir"
+echo "4. LIMITAR A 10MB APROX "
+  echo "5. Medir la Velocidad de tu maquina "
+  echo "6. Salir"
 
   read -p "Opción: " opcion
 
@@ -17,18 +18,22 @@ while true; do
       echo "INSTALANDO LIMITADOR"
       ;;
     2)
-      ./limit_bandwidth.sh eth0 10mbit 10mbit
+      ./limit_bandwidth.sh eth0 15mbit 10mbit
       echo "Limitar a 5mb aprox"
       ;;
     3)
-      ./limit_bandwidth.sh eth0 15mbit 15mbit
+      ./limit_bandwidth.sh eth0 15mbit 12mbit
       echo "Limitar a 8mb aprox"
       ;;
 4)
-      speedtest
-      echo "Testear la velocidad de tu maquina"
+      ./limit_bandwidth.sh eth0 15mbit 15mbit
+      echo "Limitar a 10mb aprox"
       ;;
-    5)
+5)
+      speedtest
+      echo "Testear la Velocidad de tu Maquina"
+      ;;
+    6)
       echo "Saliendo del script..."
       break
       ;;
