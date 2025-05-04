@@ -4,9 +4,9 @@ while true; do
   echo "MENÚ LIMiTADOr de Velocidad"
   echo "Seleccione una opción:"
   echo "1. INSTALAR LIMITADOR"
-  echo "2. LIMITAR A 5MB APROX "
-  echo "3. LIMITAR A 8MB APROX "
-echo "4. LIMITAR A 10MB APROX "
+  echo "2. LIMITAR A 8MB APROX "
+  echo "3. LIMITAR A 10MB APROX "
+echo "4. LIMITAR A 14MB APROX "
   echo "5. Medir la Velocidad de tu maquina "
   echo "6. Salir"
 
@@ -18,15 +18,15 @@ echo "4. LIMITAR A 10MB APROX "
       echo "INSTALANDO LIMITADOR"
       ;;
     2)
-      ./limit_bandwidth.sh eth0 8mbit 8mbit
+      ./limit_bandwidth.sh eth0 9mbit 9mbit
       echo "Limitar a 5mb aprox"
       ;;
     3)
-      ./limit_bandwidth.sh eth0 12mbit 12mbit
+      ./limit_bandwidth.sh eth0 15mbit 15mbit
       echo "Limitar a 8mb aprox"
       ;;
 4)
-      ./limit_bandwidth.sh eth0 15mbit 15mbit
+      ./limit_bandwidth.sh eth0 20mbit 20mbit
       echo "Limitar a 10mb aprox"
       ;;
 5)
