@@ -13,9 +13,9 @@ melon='\033[38;5;208m'
 guinda='\033[38;5;161m'
 azulR="\033[38;5;18m"
 cierre='\033[0m'
-bar1="\e[1;30m◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚\e[0m"
-bar2="\033[38;5;226m---------------------------------------------------------\033[0m"
-bar3="\033[38;5;226m--------------------- = MENU = --------------------------\033[0m"
+bar1="\e[1;30m◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚\e[0m"
+bar2="\033[38;5;226m------------------------------------------------------\033[0m"
+bar3="\033[38;5;226m------------------- = MENU = ------------------------\033[0m"
 #PATH DE ARCHVOS
 dir_token=/etc/token
 file_token=$dir_token/BD
@@ -54,20 +54,20 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 #MENSAJE DE BINEVENIDA
 msg () {
 echo -e "$bar1"
-    echo -e "${rojo}########################################################${cierre}"
+    echo -e "${rojo}#########################################${cierre}"
     echo -e "${rojo}#    ${verde}Bienvenido${blanco}, Gracias por utilizar Onlycode ${verdeR}VPN     ${rojo}# ${cierre}"
-    echo -e "${rojo}#    ${blanco}Este SCRIPT autoriza su token ID para usar${cierre}        ${rojo}# ${cierre}"
+    echo -e "${rojo}#    ${blanco}Este SCRIPT autoriza su TOKEN ID para usar${cierre}        ${rojo}# ${cierre}"
     echo -e "${rojo}#    ${blanco}Nuestra apk...                            ${cierre}        ${rojo}# ${cierre}"
     echo -e "${rojo}#   ${melon}-----------------------------------------------    ${rojo}#${cierre}"
     echo -e "${rojo}#          ${blanco}dev: ${moradoL}@dankelthaher ${blanco}- ${amarillo}Onlycode ${verdeR}VPN${cierre}           ${rojo}#${cierre}"
-    echo -e "${rojo}########################################################${cierre}"
+    echo -e "${rojo}############################################${cierre}"
     echo -e "$bar1"
 }
 #DEFINE CONTRASEÑA UNICA
 define (){
 	mkdir_dir
 echo -e "$bar1"
-echo -e "${rojo}Antes de comenzar deve ingresar su contraseña"
+echo -e "${rojo}ANTES DE COMENZAR DEBE ingresar UNA contraseña"
 echo -e "$bar2"
 read -p "$(echo -e "${amarillo}[ingrese]: ${cierre}")" pass
 echo -e "$pass" >> $file_pass
@@ -86,9 +86,9 @@ echo -e "${blanco}Ingrese el Nombre del Usuario${cierre}"
 echo -e "$bar2"
 read -p $'\e[32m  [ingrese]: \e[0m' usr
 echo -e "$bar1"
-echo -e "${blanco}Ingrese el Token que desea Autorizar${cierre}"
+echo -e "${blanco}Ingrese el TOKEN que desea Autorizar${cierre}"
 echo -e "$bar2"
-read -p $'\e[32m  [Token ID]: \e[0m' token
+read -p $'\e[32m  [TOKEN ID]: \e[0m' token
 
 # Check If Username Exist, Else Proceed
 egrep "^$token" /etc/passwd >/dev/null
@@ -97,7 +97,7 @@ clear
 echo -e "$bar1"
 echo -e "$TITLE"
 echo ""
-echo -e "\e[31m El Token ya existe en su servidor, intente con otro Token\e[0m."
+echo -e "\e[31m El TOKEN ya existe en su servidor, intente con otro Token\e[0m."
 exit 0
 else
 echo -e "$bar2"
@@ -177,14 +177,14 @@ if [ $? -eq 0 ]; then
 	echo -e ""
   echo -e "$TITLE"
   echo -e "$bar1"
-	echo -e " Token Eliminado con Exito"
+	echo -e " TOKEN Eliminado con Exito"
 	echo -e "$bar1"
 else
 	clear
 	echo -e ""
   echo -e "$TITLE"
   echo -e "$bar1"
-	echo -e " El Token que ingresaste no existe"
+	echo -e " El TOKEN que ingresaste no existe"
 	echo -e "$bar1"
 fi
 }
@@ -257,7 +257,7 @@ clear
 echo -e "$TILTE"
 echo -e "$bar1"
 echo -e ""
-echo -e " Token ID               Expiracion"
+echo -e " TOKEN ID               Expiracion"
 echo -e "$bar1"
 while read Checklist
 do
@@ -271,8 +271,10 @@ do
 done < /etc/passwd
 No_Users="$(awk -F: '$3 >= '$UIDN' && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo -e "$bar2"
-echo -e " Numero de Tokens: "$No_Users
+echo -e " Numero de TOKENS: "$No_Users
 echo -e "$bar2"
+echo -ne "\n\033[1;31mARGENTINA 🇦🇷 \033[1;33m VPS1: \033[1;32mwep!\033[0m
+\n\033[1;31mENTER \033[1;33mpara VOLVER al \033[1;32mMENU!\033[0m"; read
 }
 #ELIMINAR EXPIRADOS
 expirados () {
@@ -293,16 +295,20 @@ echo $diff | grep -q ^\- && echo okay && continue
 userdel -r -f $token  &> /dev/null
 done
 echo -e ""
-echo -e "  Todos \e[31mLos token expirados\e[0m han sido Eliminados"
+echo -e "  Todos \e[31mLos TOKEN expirados\e[0m han sido Eliminados"
 echo -e "$bar1"
 }
 informacion_clientes () {
   GreenBG="\033[42;31m"
-     echo -e "${GreenBG}                 INFORMACION DE CLIENTES                 ${cierre}"
-    echo -e "$bar2"
+     echo -e "${GreenBG}               INFORMACION DE CLIENTES                 ${cierre}"
+    echo -e "$bar1"
     cat $file_client | column -t
     echo -e "$bar1"
-
+    echo -e ""
+    echo -e "$TITLE"
+    echo -e "$bar2"
+   echo -ne "\n\033[1;31mARGENTINA 🇦🇷 \033[1;33m VPS2: \033[1;32mwep!\033[0m
+\n\033[1;31mENTER \033[1;33mpara VOLVER al \033[1;32mMENU!\033[0m"; read
 }
 online (){                                                               
 clear
@@ -364,6 +370,8 @@ fi
 
 echo " "
 echo " "
+echo -ne "\n\033[1;31mARGENTINA 🇦🇷 \033[1;33m VPS3: \033[1;32mwep!\033[0m
+\n\033[1;31mENTER \033[1;33mpara VOLVER al \033[1;32mMENU!\033[0m"; read
 }
 No_token="$(cat /etc/token/BD | wc -l)"
 #MENU DE USUARIOS
@@ -371,23 +379,23 @@ menu () {
   clear
 echo -e "${melon}               == Token Auth == (${amarillo}onlycode${cierre}${melon})
 ${bar1}
-${morado}TOTAL DE REGISTROS: ${rojo}>${cierre} ${azul}ID: ${blanco}$No_token  ${cierre}
+${morado}TOTAL DE REGISTROS: ${rojo}>${cierre} ${azul}TOKEN: ${blanco}$No_token  ${cierre}
 ${bar3}
-${azul}[1]${cierre} ${rojo}>${cierre} ${blanco}Agregar ${verdeR}ID${cierre}
-${azul}[2]${cierre} ${rojo}>${cierre} ${blanco}Eliminar ${rojo}ID${cierre}
-${azul}[3]${cierre} ${rojo}>${cierre} ${blanco}Editar Expiracion ${verde}ID${cierre}
-${azul}[4]${cierre} ${rojo}>${cierre} ${blanco}Lista de ${verde}ID${cierre}
-${azul}[5]${cierre} ${rojo}>${cierre} ${blanco}Eliminar ${verde}ID ${blanco}Expirados${cierre}
+${azul}[1]${cierre} ${rojo}>${cierre} ${blanco}AGREGAR ${verdeR}TOKEN${cierre}
+${azul}[2]${cierre} ${rojo}>${cierre} ${blanco}ELIMINAR ${rojo}TOKEN${cierre}
+${azul}[3]${cierre} ${rojo}>${cierre} ${blanco}EDITAR FECHA ${verde}TOKEN${cierre}
+${azul}[4]${cierre} ${rojo}>${cierre} ${blanco}LISTA de ${verde}TOKEN${cierre}
+${azul}[5]${cierre} ${rojo}>${cierre} ${blanco}ELIMINAR ${verde}TOKEN ${blanco}Expirados${cierre}
 ${azul}[6]${cierre} ${rojo}>${cierre} ${blanco}Informacion de Clientes${cierre}
-${azul}[7]${cierre} ${rojo}>${cierre} ${blanco}Token ${verdeR}Activos${cierre}
-${azul}[0]${cierre} ${rojo}>${cierre} ${rojo}SALIR${cierre}
+${azul}[7]${cierre} ${rojo}>${cierre} ${blanco}TOKEN ${verdeR}ONLINES${cierre}
+${azul}[0]${cierre} ${rojo}>${cierre} ${rojo}SALIR al Menu${cierre}
 ${bar2}"
 read -p "$(echo -e "${blanco}seleccione [0-7]:${cierre}")" selection
 case "$selection" in
 	1)crear ;;
 	2)eliminar ;;
   3)editar ;;
-  4)lista ;;
+  4)lista;;
   5)expirados ;;
   6)informacion_clientes;;
   7)online;;
